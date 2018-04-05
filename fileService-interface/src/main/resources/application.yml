@@ -1,0 +1,54 @@
+---
+spring:
+  profiles:
+    active: @activatedProperties@
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+      enabled: true
+  datasource:
+    name: filess
+    url: jdbc:h2:file:~/filess
+    username: filess
+    password: filess
+  http:
+    multipart:
+      max-file-size: 20mb
+      max-request-size: 20mb
+  mvc:
+    static-path-pattern: /static/**
+server:
+  error:
+      whitelabel:
+        enabled: false
+  port: 7000
+  session:
+    timeout: 1800
+mybatis:
+  mapper-locations: classpath*:/mybatis/**/*Mapper.xml
+pagehelper:
+  support-methods-arguments: true
+  params: pageNum=page
+
+
+--- # 开发配置定义
+
+spring:
+  profiles: development
+server:
+  port: 7000
+third-service:
+  fastdfs:
+    tracker-servers: 192.168.68.128:22122
+
+
+--- # 生产配置定义
+
+spring:
+  profiles: production
+server:
+  port: 7000
+third-service:
+  fastdfs:
+    tracker-servers: 192.168.68.128:22122

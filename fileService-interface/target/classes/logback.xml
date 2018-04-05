@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <jmxConfigurator/>
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>../logs/csp/csp-server.%d{yyyy-MM-dd}.log
+      </fileNamePattern>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.lmbx.csp" level="info">
+    <appender-ref ref="rollingFile"/>
+  </logger>
+
+  <!-- druid  -->
+  <logger name="druid.sql.Connection" level="debug"/>
+  <logger name="druid.sql.Statement" level="debug"/>
+  <logger name="druid.sql.ResultSet" level="debug"/>
+
+  <root level="info">
+    <appender-ref ref="console"/>
+  </root>
+</configuration>
