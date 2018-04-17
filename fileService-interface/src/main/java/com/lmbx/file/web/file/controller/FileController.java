@@ -84,10 +84,66 @@ public class FileController {
     public List<FileInfo> find(FileInfoFilter fileInfoFilter) {
         return fileService.query(fileInfoFilter);
     }
-
+    @GetMapping("/download2")
+    public void upload2(String fileid) throws UnsupportedEncodingException {
+    	System.out.println("sssssss");
+    	Map<String, Object> fileWithMetaData = commonService.downloadWithMetaData(fileid);
+        
+        byte[] fileByteArr = (byte[]) fileWithMetaData.get("body");
+        ByteArrayResource resource = new ByteArrayResource(fileByteArr);
+        NameValuePair[] metaData = (NameValuePair[]) fileWithMetaData.get("meta");
+        String fileName = "";
+        if (metaData != null) {
+            for (NameValuePair pair : metaData) {
+                if ("name".equals(pair.getName())) {
+                    fileName = pair.getValue();
+                    break;
+                }
+            }
+        }
+    }
+    
+    @GetMapping("/download3")
+    public void upload3(String fileid) throws UnsupportedEncodingException {
+    	System.out.println("333");
+    	Map<String, Object> fileWithMetaData = commonService.downloadWithMetaData(fileid);
+        
+        byte[] fileByteArr = (byte[]) fileWithMetaData.get("body");
+        ByteArrayResource resource = new ByteArrayResource(fileByteArr);
+        NameValuePair[] metaData = (NameValuePair[]) fileWithMetaData.get("meta");
+        String fileName = "";
+        if (metaData != null) {
+            for (NameValuePair pair : metaData) {
+                if ("name".equals(pair.getName())) {
+                    fileName = pair.getValue();
+                    break;
+                }
+            }
+        }
+    }
+    @GetMapping("/download4")
+    public void upload4(String fileid) throws UnsupportedEncodingException {
+    	System.out.println("4444");
+    	Map<String, Object> fileWithMetaData = commonService.downloadWithMetaData(fileid);
+        
+        byte[] fileByteArr = (byte[]) fileWithMetaData.get("body");
+        ByteArrayResource resource = new ByteArrayResource(fileByteArr);
+        NameValuePair[] metaData = (NameValuePair[]) fileWithMetaData.get("meta");
+        String fileName = "";
+        if (metaData != null) {
+            for (NameValuePair pair : metaData) {
+                if ("name".equals(pair.getName())) {
+                    fileName = pair.getValue();
+                    break;
+                }
+            }
+        }
+    }
     @GetMapping("/download")
     public ResponseEntity<Resource> upload(String fileid) throws UnsupportedEncodingException {
-        Map<String, Object> fileWithMetaData = commonService.downloadWithMetaData(fileid);
+    	System.out.println("sssssss");
+    	Map<String, Object> fileWithMetaData = commonService.downloadWithMetaData(fileid);
+        
         byte[] fileByteArr = (byte[]) fileWithMetaData.get("body");
         ByteArrayResource resource = new ByteArrayResource(fileByteArr);
         NameValuePair[] metaData = (NameValuePair[]) fileWithMetaData.get("meta");
@@ -101,8 +157,8 @@ public class FileController {
             }
         }
         return ResponseEntity.ok()
-                .header("Content-Disposition", "attachment; filename=\"" + new String(fileName.getBytes("UTF-8"), "ISO8859-1") + "\"")
-                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .header("Content-Disposition", "attachment; filename=" + new String(fileName.getBytes("UTF-8"), "ISO8859-1") )
+                .header("fileName", new String(fileName.getBytes("UTF-8"), "ISO8859-1")).contentType(MediaType.parseMediaType("application/octet-stream"))
                 .contentLength(fileByteArr.length)
                 .body(resource);
     }

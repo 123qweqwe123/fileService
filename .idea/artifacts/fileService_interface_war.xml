@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fileService-interface:war">
+    <output-path>$PROJECT_DIR$/fileService-interface/target</output-path>
+    <root id="archive" name="file.war">
+      <element id="artifact" artifact-name="fileService-interface:war exploded" />
+    </root>
+  </artifact>
+</component>

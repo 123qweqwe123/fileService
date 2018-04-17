@@ -1,7 +1,9 @@
 package com.lmbx.file.web.file.service.Impl;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.csource.common.NameValuePair;
@@ -63,8 +65,26 @@ public class FileServiceImpl implements FileService {
 
 
     public List<FileInfo> query(FileInfoFilter fileInfoFilter) {
+        if(StringUtils.isNotEmpty(fileInfoFilter.getFilesizemax())&&!"".equals(fileInfoFilter.getFilesizemax())){
+            int fileSizeMax = Integer.parseInt(fileInfoFilter.getFilesizemax());
+            fileInfoFilter.setFilesizemax(String.valueOf(fileSizeMax*1024));
+        }
+
+        if(StringUtils.isNotEmpty(fileInfoFilter.getFilesizemin())&&!"".equals(fileInfoFilter.getFilesizemin())){
+            int fileSizeMin = Integer.parseInt(fileInfoFilter.getFilesizemin());
+            fileInfoFilter.setFilesizemin(String.valueOf(fileSizeMin*1024));
+        }
         List<FileInfo> lists = fileInfoMapper.selectByFilter(fileInfoFilter);
+        lists.stream().map(fileInfo -> {
+            long value = Long.parseLong(fileInfo.getFilesize());
+            BigDecimal filesize = new BigDecimal(value);
+            BigDecimal megabyte = new BigDecimal(1024 * 1024);
+            float returnValue = filesize.divide(megabyte, 2, BigDecimal.ROUND_UP).floatValue();
+            BigDecimal kilobyte = new BigDecimal(1024);
+            returnValue = filesize.divide(kilobyte, 2, BigDecimal.ROUND_UP).floatValue();
+            fileInfo.setFilesize(String.valueOf(returnValue));
+            return  fileInfo;
+        }).collect(Collectors.toList());
         return lists;
     }
-
 }

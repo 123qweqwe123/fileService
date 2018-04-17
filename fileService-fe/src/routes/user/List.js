@@ -35,7 +35,7 @@ const List = ({
       width: '10%',
       //render: (text, record) => <Link to={`user/${record.id}`}>{text}</Link>,
     }, {
-      title: '文件大小(M)',
+      title: '文件大小(KB)',
       dataIndex: 'filesize',
       key: 'filesize',
       width: '5%',

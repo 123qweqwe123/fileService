@@ -8,10 +8,14 @@ spring:
         web-allow-others: true
       enabled: true
   datasource:
+    driver-class-name: org.h2.Driver
     name: filess
     url: jdbc:h2:file:~/filess
     username: filess
     password: filess
+    druid:
+      filters: wall,stat,slf4j
+      poolPreparedStatements: true
   http:
     multipart:
       max-file-size: 20mb
@@ -30,7 +34,6 @@ mybatis:
 pagehelper:
   support-methods-arguments: true
   params: pageNum=page
-
 
 --- # 开发配置定义
 

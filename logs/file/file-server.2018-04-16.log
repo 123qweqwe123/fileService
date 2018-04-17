@@ -1,0 +1,11 @@
+2018-04-16 10:19:14.338 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 9964 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-16 10:19:14.383 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: activatedProperties
+2018-04-16 10:20:26.024 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 10852 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-16 10:20:26.039 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-16 10:20:33.460 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-16 10:20:39.188 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 14.528 seconds (JVM running for 20.218)
+2018-04-16 10:27:54.618 [http-nio-7000-exec-8] ERROR c.l.f.c.exception.ServiceException - url:/common/file/upload,error:Required request part 'file' is not present
+2018-04-16 10:28:03.803 [http-nio-7000-exec-10] ERROR c.l.f.c.exception.ServiceException - url:/common/file/upload,error:Required request part 'file' is not present
+2018-04-16 10:28:08.528 [http-nio-7000-exec-1] ERROR c.l.f.c.exception.ServiceException - url:/common/file/upload,error:Required String parameter 'filetype' is not present
+2018-04-16 10:28:19.092 [http-nio-7000-exec-4] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 上传文件成功，ID：group1/M00/00/00/wKhEgFrUesOAS2qkAAGwso5eukU714.stx
+2018-04-16 10:28:19.110 [http-nio-7000-exec-4] INFO  c.l.f.w.f.s.Impl.FileServiceImpl - 保存文件信息成功，文件位置标识：group1/M00/00/00/wKhEgFrUesOAS2qkAAGwso5eukU714.stx

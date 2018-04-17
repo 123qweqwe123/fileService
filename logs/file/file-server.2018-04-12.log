@@ -1,0 +1,38 @@
+2018-04-12 10:46:18.280 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 1048 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 10:46:18.296 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 10:46:23.988 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 10:46:28.111 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 10.736 seconds (JVM running for 12.176)
+2018-04-12 10:47:04.210 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 11216 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 10:47:04.217 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 10:47:08.783 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 10:47:12.178 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 8.693 seconds (JVM running for 10.188)
+2018-04-12 10:47:23.283 [http-nio-7000-exec-1] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download,error:下载文件失败
+2018-04-12 10:47:55.360 [http-nio-7000-exec-3] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download,error:下载文件失败
+2018-04-12 10:48:21.838 [http-nio-7000-exec-7] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download,error:下载文件失败
+2018-04-12 10:48:59.897 [http-nio-7000-exec-10] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download2,error:class path resource [static/index.html] cannot be resolved to URL because it does not exist
+2018-04-12 10:49:22.230 [http-nio-7000-exec-1] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download2,error:class path resource [static/index.html] cannot be resolved to URL because it does not exist
+2018-04-12 10:50:41.039 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 9780 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 10:50:41.047 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 10:50:45.767 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 10:50:49.039 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 8.764 seconds (JVM running for 10.011)
+2018-04-12 10:51:04.685 [http-nio-7000-exec-1] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download2,error:下载文件失败
+2018-04-12 10:51:42.217 [http-nio-7000-exec-2] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download3,error:class path resource [static/index.html] cannot be resolved to URL because it does not exist
+2018-04-12 10:53:29.497 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 9448 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 10:53:29.510 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 10:53:37.959 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 10:53:43.836 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 17.526 seconds (JVM running for 30.046)
+2018-04-12 10:53:54.845 [http-nio-7000-exec-1] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download3,error:下载文件失败
+2018-04-12 10:54:36.977 [http-nio-7000-exec-2] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download4,error:下载文件失败
+2018-04-12 10:54:56.363 [http-nio-7000-exec-3] ERROR c.l.f.c.exception.ServiceException - url:/common/file/download4,error:下载文件失败
+2018-04-12 10:55:24.066 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 7388 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 10:55:24.097 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 10:55:31.244 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 10:55:36.219 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 13.627 seconds (JVM running for 18.27)
+2018-04-12 13:14:04.715 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 10660 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 13:14:04.736 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 13:14:14.626 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 13:14:20.822 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 19.828 seconds (JVM running for 26.449)
+2018-04-12 16:39:44.790 [main] INFO  com.lmbx.file.WebServerApplication - Starting WebServerApplication on MS-20180222AOFL with PID 1180 (D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface\target\classes started by Administrator in D:\Users\Administrator\eclipse-workspace\fileService\fileService-interface)
+2018-04-12 16:39:44.815 [main] INFO  com.lmbx.file.WebServerApplication - The following profiles are active: development
+2018-04-12 16:39:52.902 [main] INFO  c.l.f.t.f.i.FastDFSFileServiceImpl - 系统文件服务初始化成功。
+2018-04-12 16:39:58.722 [main] INFO  com.lmbx.file.WebServerApplication - Started WebServerApplication in 15.687 seconds (JVM running for 21.704)

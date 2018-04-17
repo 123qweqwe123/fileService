@@ -7,7 +7,7 @@ public class FileInfoFilter extends PageFilter {
 
     private String name;
 
-    private String fileId;
+    private String fileid;
 
     private String filesizemin;
 
@@ -22,16 +22,16 @@ public class FileInfoFilter extends PageFilter {
 
 
     private String filetype;
-    
+
     public String getFiletype() {
-		return filetype;
-	}
+        return filetype;
+    }
 
-	public void setFiletype(String filetype) {
-		this.filetype = filetype;
-	}
+    public void setFiletype(String filetype) {
+        this.filetype = filetype;
+    }
 
-	public String getId() {
+    public String getId() {
         return id;
     }
 
@@ -47,12 +47,12 @@ public class FileInfoFilter extends PageFilter {
         this.name = name;
     }
 
-    public String getFileId() {
-        return fileId;
+    public String getFileid() {
+        return fileid;
     }
 
-    public void setFileId(String fileId) {
-        this.fileId = fileId;
+    public void setFileid(String fileid) {
+        this.fileid = fileid;
     }
 
     public String getFilesizemin() {

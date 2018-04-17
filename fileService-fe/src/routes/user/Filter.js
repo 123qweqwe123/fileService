@@ -102,7 +102,7 @@ const Filter = ({
       </Col>
 
       <Col {...ColProps} xl={{ span: 4 }} md={{ span: 8 }}>
-        {getFieldDecorator('type', { initialValue: name })(<Search placeholder="文件类型" onSearch={handleSubmit} />)}
+        {getFieldDecorator('type', { initialValue: name })(<Search placeholder="文件格式" onSearch={handleSubmit} />)}
       </Col>
       <Col {...ColProps} xl={{ span: 4 }} md={{ span: 8 }}>
         {getFieldDecorator('filetype', { initialValue: name })(<Search placeholder="文件类别" onSearch={handleSubmit} />)}

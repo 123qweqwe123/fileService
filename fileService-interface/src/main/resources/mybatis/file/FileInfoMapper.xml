@@ -277,7 +277,7 @@
   
     <select id="selectByFilter" parameterType="com.lmbx.file.web.file.filter.FileInfoFilter" resultMap="BaseResultMap">
     select
-    ID, NAME, FILEID,FILESIZE/1024 as FILESIZE, PROJECT, TYPE, UPLOAD_TIME, CONTENTTYPE, FILETYPE
+    ID, NAME, FILEID,FILESIZE, PROJECT, TYPE, UPLOAD_TIME, CONTENTTYPE, FILETYPE
     from FILE_INFO where 1=1
     <if test="id != null and id != ''">
       AND id like CONCAT('%',#{id},'%')
@@ -289,16 +289,16 @@
       AND project like CONCAT('%',#{project},'%')
     </if>
 
-    <if test="filesizemax != null">
-      AND filesize &lt; #{filesizemax}
+    <if test="filesizemax != null and filesizemax != ''">
+      AND filesize  &lt; CONVERT(#{filesizemax},SIGNED)
     </if>
-    <if test="filesizemin != null">
-      AND filesize &gt; #{filesizemin}
+    <if test="filesizemin != null and filesizemin != ''">
+      AND filesize  &gt; CONVERT(#{filesizemin},SIGNED)
     </if>
 
 
-    <if test="fileId != null">
-      AND fileid like CONCAT('%',#{fileId},'%')
+    <if test="fileid != null">
+      AND fileid like CONCAT('%',#{fileid},'%')
     </if>
     <if test="name != null">
       AND name like CONCAT('%',#{name},'%')
